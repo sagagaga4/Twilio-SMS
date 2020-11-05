@@ -1,0 +1,17 @@
+from twilio.rest import Client
+
+account_sid = '***************************'
+auth_token = '****************************'
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+                            body='שם טוב האבי',
+                            from_='"+Twilio Number',
+                             to='+Your Number'
+                           ) 
+                           
+
+print(message.sid)
+            
+
+    
